@@ -12,7 +12,16 @@ public class MyLinkedList<K> {
 		this.tail=null;
 		
 	}
-	
+	public boolean isEmpty()
+	{
+		if(this.head==null && this.tail==null)
+		{
+			return true;
+		}
+		else
+			return false;
+
+	}
 	public void  addNode(INodeIF<K> newNode)
 	{
 		if(this.tail==null)
@@ -66,7 +75,9 @@ public class MyLinkedList<K> {
 		
 		INodeIF<K> tempNode=head;
 		this.head=head.getNext();
-		
+		if(this.head==null) {
+			this.tail = null;
+		}
 		return tempNode;
 		
 	}
@@ -82,6 +93,9 @@ public class MyLinkedList<K> {
 		this.tail=tempNode;
 		this.tail.setNext(null);
 		tempNode=tempNode.getNext();
+		if(this.tail==null) {
+			this.head = null;
+		}
 		return tempNode;
 		
 	}
