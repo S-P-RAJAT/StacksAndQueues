@@ -2,8 +2,8 @@ package com.bridgelabz.linkedlist;
 
 public class MyLinkedList<K> {
 
-	private INodeIF<K> head;
-	private INodeIF<K> tail;
+	public INodeIF<K> head;
+	public INodeIF<K> tail;
 	
 	public MyLinkedList() 
 	
